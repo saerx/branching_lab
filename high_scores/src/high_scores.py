@@ -3,8 +3,9 @@ def latest(scores):
 
 
 def personal_best(scores):
-    return max( scores )
+    return max(scores)
 
 
 def personal_top_three(scores):
-    pass
+   top_scores = sorted((scores), reverse=True)[:3]
+   return top_scores
