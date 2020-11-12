@@ -7,7 +7,7 @@ from src.high_scores import latest, personal_best, personal_top_three
 
 class HighScoresTest(unittest.TestCase):
     def setUp(self):
-        self.scores = [111, 222, 333, 444, 555]
+        self.scores = [111, 777, 333, 444, 555]
     
     # Tests
 
@@ -22,6 +22,13 @@ class HighScoresTest(unittest.TestCase):
 
 
     # Test personal best (the highest score in the list)
+    def test_personal_best( self ):
+
+ # pass in scores list
+        best_score = personal_best( self.scores )
+ #  call personalBest to get highest score in list
+        self.assertEqual( 777, best_score )
+ # compare
 
     # Test top three from list of scores
 
